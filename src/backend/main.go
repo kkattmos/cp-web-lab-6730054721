@@ -19,7 +19,8 @@ func buildAppService() service.Service {
 	healthService := service.NewDefaultHealthService()
 	fooBarService := service.NewDefaultFooBarService()
 
-	return service.NewDefaultService(healthService, fooBarService)
+	greetService := service.NewDefaultGreetService()
+	return service.NewDefaultService(healthService, fooBarService, greetService)
 }
 
 func newApp(appService service.Service) *fiber.App {
@@ -32,6 +33,7 @@ func newApp(appService service.Service) *fiber.App {
 	router.Register(app,
 		router.NewHealthzRouter(appService),
 		router.NewFooBarRouter(appService),
+		router.NewGreetRouter(appService),
 	)
 
 	return app
