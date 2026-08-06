@@ -1,11 +1,11 @@
 package router
 
 import (
-	"github.com/gofiber/fiber/v3"
-	"cp-web-template-backend/internal/endpoints/greet"
 	"cp-web-template-backend/internal/endpoints/foobar"
+	"cp-web-template-backend/internal/endpoints/greet"
 	"cp-web-template-backend/internal/endpoints/healthz"
 	"cp-web-template-backend/internal/service"
+	"github.com/gofiber/fiber/v3"
 )
 
 type Registrar interface {

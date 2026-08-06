@@ -52,7 +52,6 @@ func TestDefaultServiceGreet(t *testing.T) {
 	}
 }
 
-
 func TestNewDefaultHealthService(t *testing.T) {
 	t.Parallel()
 
